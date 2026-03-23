@@ -1,0 +1,563 @@
+Microsoft Windows [Version 10.0.26100.8037]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\bhava>pip install pandas boto3 sqlalchemy psycopg2 apache-airflow
+Collecting pandas
+  Downloading pandas-3.0.1-cp313-cp313-win_amd64.whl.metadata (19 kB)
+Collecting boto3
+  Downloading boto3-1.42.73-py3-none-any.whl.metadata (6.7 kB)
+Collecting sqlalchemy
+  Downloading sqlalchemy-2.0.48-cp313-cp313-win_amd64.whl.metadata (9.8 kB)
+Collecting psycopg2
+  Downloading psycopg2-2.9.11-cp313-cp313-win_amd64.whl.metadata (5.1 kB)
+Collecting apache-airflow
+  Downloading apache_airflow-3.1.8-py3-none-any.whl.metadata (36 kB)
+Collecting numpy>=1.26.0 (from pandas)
+  Downloading numpy-2.4.3-cp313-cp313-win_amd64.whl.metadata (6.6 kB)
+Collecting python-dateutil>=2.8.2 (from pandas)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting tzdata (from pandas)
+  Downloading tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting botocore<1.43.0,>=1.42.73 (from boto3)
+  Downloading botocore-1.42.73-py3-none-any.whl.metadata (5.9 kB)
+Collecting jmespath<2.0.0,>=0.7.1 (from boto3)
+  Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting s3transfer<0.17.0,>=0.16.0 (from boto3)
+  Downloading s3transfer-0.16.0-py3-none-any.whl.metadata (1.7 kB)
+Collecting urllib3!=2.2.0,<3,>=1.25.4 (from botocore<1.43.0,>=1.42.73->boto3)
+  Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting greenlet>=1 (from sqlalchemy)
+  Downloading greenlet-3.3.2-cp313-cp313-win_amd64.whl.metadata (3.8 kB)
+Collecting typing-extensions>=4.6.0 (from sqlalchemy)
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting apache-airflow-core==3.1.8 (from apache-airflow)
+  Downloading apache_airflow_core-3.1.8-py3-none-any.whl.metadata (6.4 kB)
+Collecting apache-airflow-task-sdk==1.1.8 (from apache-airflow)
+  Downloading apache_airflow_task_sdk-1.1.8-py3-none-any.whl.metadata (3.9 kB)
+Collecting a2wsgi>=1.10.8 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading a2wsgi-1.10.10-py3-none-any.whl.metadata (4.0 kB)
+Collecting aiosqlite<0.22.0,>=0.20.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading aiosqlite-0.21.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting alembic<2.0,>=1.13.1 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading alembic-1.18.4-py3-none-any.whl.metadata (7.2 kB)
+Collecting apache-airflow-providers-common-compat>=1.7.4 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading apache_airflow_providers_common_compat-1.14.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting apache-airflow-providers-common-io>=1.6.3 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading apache_airflow_providers_common_io-1.7.1-py3-none-any.whl.metadata (5.7 kB)
+Collecting apache-airflow-providers-common-sql>=1.28.1 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading apache_airflow_providers_common_sql-1.33.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting apache-airflow-providers-smtp>=2.3.1 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading apache_airflow_providers_smtp-2.4.3-py3-none-any.whl.metadata (5.2 kB)
+Collecting apache-airflow-providers-standard>=1.9.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading apache_airflow_providers_standard-1.12.1-py3-none-any.whl.metadata (5.7 kB)
+Collecting argcomplete>=1.10 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading argcomplete-3.6.3-py3-none-any.whl.metadata (16 kB)
+Collecting asgiref>=2.3.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading asgiref-3.11.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting attrs!=25.2.0,>=22.1.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting cadwyn>=5.2.1 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading cadwyn-6.1.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting colorlog>=6.8.2 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading colorlog-6.10.1-py3-none-any.whl.metadata (11 kB)
+Collecting cron-descriptor>=1.2.24 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading cron_descriptor-2.0.6-py3-none-any.whl.metadata (8.1 kB)
+Collecting croniter>=2.0.2 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading croniter-6.2.2-py3-none-any.whl.metadata (22 kB)
+Collecting cryptography>=41.0.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading cryptography-46.0.5-cp311-abi3-win_amd64.whl.metadata (5.7 kB)
+Collecting deprecated>=1.2.13 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading deprecated-1.3.1-py2.py3-none-any.whl.metadata (5.9 kB)
+Collecting dill>=0.2.2 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+Collecting fastapi<0.118.0,>=0.116.0 (from fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading fastapi-0.117.1-py3-none-any.whl.metadata (28 kB)
+Collecting httpx>=0.25.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting importlib-metadata>=7.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading importlib_metadata-9.0.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting itsdangerous>=2.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.5 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting jsonschema>=4.19.1 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting lazy-object-proxy>=1.2.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading lazy_object_proxy-1.12.0-cp313-cp313-win_amd64.whl.metadata (5.3 kB)
+Collecting libcst>=1.8.2 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading libcst-1.8.6-cp313-cp313-win_amd64.whl.metadata (15 kB)
+Collecting linkify-it-py>=2.0.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading linkify_it_py-2.1.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting lockfile>=0.12.2 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting methodtools>=0.4.7 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading methodtools-0.4.7-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting msgspec>=0.19.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading msgspec-0.20.0-cp313-cp313-win_amd64.whl.metadata (5.6 kB)
+Collecting natsort>=8.4.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading natsort-8.4.0-py3-none-any.whl.metadata (21 kB)
+Collecting opentelemetry-api>=1.27.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading opentelemetry_api-1.40.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting opentelemetry-exporter-otlp>=1.27.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading opentelemetry_exporter_otlp-1.40.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting opentelemetry-proto<9999,>=1.27.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading opentelemetry_proto-1.40.0-py3-none-any.whl.metadata (2.4 kB)
+Collecting packaging>=25.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pathspec>=0.9.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pathspec-1.0.4-py3-none-any.whl.metadata (13 kB)
+Collecting pendulum>=3.1.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pendulum-3.2.0-cp313-cp313-win_amd64.whl.metadata (7.0 kB)
+Collecting pluggy>=1.5.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting psutil>=5.8.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading psutil-7.2.2-cp37-abi3-win_amd64.whl.metadata (22 kB)
+Collecting pydantic>=2.11.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+Collecting pygments!=2.19.0,>=2.0.1 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting pygtrie>=2.5.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pygtrie-2.5.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting pyjwt>=2.11.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pyjwt-2.12.1-py3-none-any.whl.metadata (4.1 kB)
+Collecting python-daemon>=3.0.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading python_daemon-3.1.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting python-slugify>=5.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading python_slugify-8.0.4-py2.py3-none-any.whl.metadata (8.5 kB)
+Collecting requests<3,>=2.32.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting rich-argparse>=1.0.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading rich_argparse-1.7.2-py3-none-any.whl.metadata (14 kB)
+Collecting rich>=13.6.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading rich-14.3.3-py3-none-any.whl.metadata (18 kB)
+Collecting setproctitle>=1.3.3 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading setproctitle-1.3.7-cp313-cp313-win_amd64.whl.metadata (11 kB)
+Collecting sqlalchemy-jsonfield>=1.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading SQLAlchemy_JSONField-1.0.2-py3-none-any.whl.metadata (5.2 kB)
+Collecting sqlalchemy-utils>=0.41.2 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading sqlalchemy_utils-0.42.1-py3-none-any.whl.metadata (4.6 kB)
+Collecting starlette>=0.45.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading starlette-1.0.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting structlog>=25.4.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading structlog-25.5.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting svcs>=25.1.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading svcs-25.1.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting tabulate>=0.9.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+Collecting tenacity>=8.3.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+Collecting termcolor>=3.0.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading termcolor-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting universal-pathlib<0.3.0,>=0.2.6 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading universal_pathlib-0.2.6-py3-none-any.whl.metadata (25 kB)
+Collecting uuid6>=2024.7.10 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading uuid6-2025.0.1-py3-none-any.whl.metadata (10 kB)
+Collecting uvicorn>=0.37.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading uvicorn-0.42.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting babel>=2.17.0 (from apache-airflow-task-sdk==1.1.8->apache-airflow)
+  Downloading babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting fsspec>=2023.10.0 (from apache-airflow-task-sdk==1.1.8->apache-airflow)
+  Downloading fsspec-2026.2.0-py3-none-any.whl.metadata (10 kB)
+Collecting greenback>=1.2.1 (from apache-airflow-task-sdk==1.1.8->apache-airflow)
+  Downloading greenback-1.3.0-py3-none-any.whl.metadata (9.8 kB)
+Collecting Mako (from alembic<2.0,>=1.13.1->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading mako-1.3.10-py3-none-any.whl.metadata (2.9 kB)
+Collecting starlette>=0.45.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading starlette-0.48.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting fastapi-cli>=0.0.8 (from fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.8; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading fastapi_cli-0.0.24-py3-none-any.whl.metadata (6.4 kB)
+Collecting python-multipart>=0.0.18 (from fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading python_multipart-0.0.22-py3-none-any.whl.metadata (1.8 kB)
+Collecting email-validator>=2.0.0 (from fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+Collecting anyio (from httpx>=0.25.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting certifi (from httpx>=0.25.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx>=0.25.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx>=0.25.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx>=0.25.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting protobuf<7.0,>=5.0 (from opentelemetry-proto<9999,>=1.27.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading protobuf-6.33.6-cp310-abi3-win_amd64.whl.metadata (593 bytes)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.11.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.41.5 (from pydantic>=2.11.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pydantic_core-2.41.5-cp313-cp313-win_amd64.whl.metadata (7.4 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic>=2.11.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3,>=2.32.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading charset_normalizer-3.4.6-cp313-cp313-win_amd64.whl.metadata (41 kB)
+Collecting sqlparse>=0.5.1 (from apache-airflow-providers-common-sql>=1.28.1->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting more-itertools>=9.0.0 (from apache-airflow-providers-common-sql>=1.28.1->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading more_itertools-10.8.0-py3-none-any.whl.metadata (39 kB)
+Collecting aiosmtplib>=0.1.6 (from apache-airflow-providers-smtp>=2.3.1->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading aiosmtplib-5.1.0-py3-none-any.whl.metadata (3.6 kB)
+INFO: pip is looking at multiple versions of cadwyn to determine which version is compatible with other requirements. This could take a while.
+Collecting cadwyn>=5.2.1 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading cadwyn-6.0.4-py3-none-any.whl.metadata (4.5 kB)
+  Downloading cadwyn-6.0.3-py3-none-any.whl.metadata (4.5 kB)
+  Downloading cadwyn-6.0.2-py3-none-any.whl.metadata (4.5 kB)
+  Downloading cadwyn-6.0.1-py3-none-any.whl.metadata (4.5 kB)
+  Downloading cadwyn-6.0.0-py3-none-any.whl.metadata (4.5 kB)
+  Downloading cadwyn-5.6.2-py3-none-any.whl.metadata (4.5 kB)
+  Downloading cadwyn-5.6.1-py3-none-any.whl.metadata (4.5 kB)
+INFO: pip is still looking at multiple versions of cadwyn to determine which version is compatible with other requirements. This could take a while.
+  Downloading cadwyn-5.6.0-py3-none-any.whl.metadata (4.5 kB)
+  Downloading cadwyn-5.5.1-py3-none-any.whl.metadata (4.5 kB)
+  Downloading cadwyn-5.5.0-py3-none-any.whl.metadata (4.5 kB)
+  Downloading cadwyn-5.4.6-py3-none-any.whl.metadata (4.5 kB)
+Collecting colorama (from colorlog>=6.8.2->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting cffi>=2.0.0 (from cryptography>=41.0.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading cffi-2.0.0-cp313-cp313-win_amd64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography>=41.0.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting wrapt<3,>=1.10 (from deprecated>=1.2.13->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading wrapt-2.1.2-cp313-cp313-win_amd64.whl.metadata (7.6 kB)
+Collecting dnspython>=2.0.0 (from email-validator>=2.0.0->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting typer>=0.16.0 (from fastapi-cli>=0.0.8->fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.8; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading typer-0.24.1-py3-none-any.whl.metadata (16 kB)
+Collecting rich-toolkit>=0.14.8 (from fastapi-cli>=0.0.8->fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.8; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading rich_toolkit-0.19.7-py3-none-any.whl.metadata (1.0 kB)
+Collecting sniffio (from greenback>=1.2.1->apache-airflow-task-sdk==1.1.8->apache-airflow)
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting outcome (from greenback>=1.2.1->apache-airflow-task-sdk==1.1.8->apache-airflow)
+  Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting zipp>=3.20 (from importlib-metadata>=7.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=3.1.5->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading markupsafe-3.0.3-cp313-cp313-win_amd64.whl.metadata (2.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.19.1->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.19.1->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=4.19.1->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading rpds_py-0.30.0-cp313-cp313-win_amd64.whl.metadata (4.2 kB)
+Collecting pyyaml-ft>=8.0.0 (from libcst>=1.8.2->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pyyaml_ft-8.0.0-cp313-cp313-win_amd64.whl.metadata (8.6 kB)
+Collecting uc-micro-py (from linkify-it-py>=2.0.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading uc_micro_py-2.0.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting wirerope>=0.4.7 (from methodtools>=0.4.7->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading wirerope-1.0.0-py2.py3-none-any.whl.metadata (3.3 kB)
+Collecting importlib-metadata>=7.0 (from apache-airflow-core==3.1.8->apache-airflow)
+  Downloading importlib_metadata-8.7.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting opentelemetry-exporter-otlp-proto-grpc==1.40.0 (from opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading opentelemetry_exporter_otlp_proto_grpc-1.40.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting opentelemetry-exporter-otlp-proto-http==1.40.0 (from opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading opentelemetry_exporter_otlp_proto_http-1.40.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting googleapis-common-protos~=1.57 (from opentelemetry-exporter-otlp-proto-grpc==1.40.0->opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading googleapis_common_protos-1.73.0-py3-none-any.whl.metadata (9.4 kB)
+Collecting grpcio<2.0.0,>=1.66.2 (from opentelemetry-exporter-otlp-proto-grpc==1.40.0->opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading grpcio-1.78.0-cp313-cp313-win_amd64.whl.metadata (3.9 kB)
+Collecting opentelemetry-exporter-otlp-proto-common==1.40.0 (from opentelemetry-exporter-otlp-proto-grpc==1.40.0->opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading opentelemetry_exporter_otlp_proto_common-1.40.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting opentelemetry-sdk~=1.40.0 (from opentelemetry-exporter-otlp-proto-grpc==1.40.0->opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading opentelemetry_sdk-1.40.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting opentelemetry-semantic-conventions==0.61b0 (from opentelemetry-sdk~=1.40.0->opentelemetry-exporter-otlp-proto-grpc==1.40.0->opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading opentelemetry_semantic_conventions-0.61b0-py3-none-any.whl.metadata (2.5 kB)
+Collecting text-unidecode>=1.3 (from python-slugify>=5.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=13.6.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.6.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.7 (from rich-toolkit>=0.14.8->fastapi-cli>=0.0.8->fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.8; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting shellingham>=1.3.0 (from typer>=0.16.0->fastapi-cli>=0.0.8->fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.8; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting annotated-doc>=0.0.2 (from typer>=0.16.0->fastapi-cli>=0.0.8->fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.8; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+Collecting httptools>=0.6.3 (from uvicorn[standard]>=0.12.0; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading httptools-0.7.1-cp313-cp313-win_amd64.whl.metadata (3.6 kB)
+Collecting python-dotenv>=0.13 (from uvicorn[standard]>=0.12.0; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+Collecting pyyaml>=5.1 (from uvicorn[standard]>=0.12.0; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading pyyaml-6.0.3-cp313-cp313-win_amd64.whl.metadata (2.4 kB)
+Collecting watchfiles>=0.20 (from uvicorn[standard]>=0.12.0; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading watchfiles-1.1.1-cp313-cp313-win_amd64.whl.metadata (5.0 kB)
+Collecting websockets>=10.4 (from uvicorn[standard]>=0.12.0; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]<0.118.0,>=0.116.0->apache-airflow-core==3.1.8->apache-airflow)
+  Downloading websockets-16.0-cp313-cp313-win_amd64.whl.metadata (7.0 kB)
+Downloading pandas-3.0.1-cp313-cp313-win_amd64.whl (9.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 38.5 MB/s  0:00:00
+Downloading boto3-1.42.73-py3-none-any.whl (140 kB)
+Downloading botocore-1.42.73-py3-none-any.whl (14.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.7/14.7 MB 43.4 MB/s  0:00:00
+Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading s3transfer-0.16.0-py3-none-any.whl (86 kB)
+Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+Downloading sqlalchemy-2.0.48-cp313-cp313-win_amd64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 38.6 MB/s  0:00:00
+Downloading psycopg2-2.9.11-cp313-cp313-win_amd64.whl (2.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 46.5 MB/s  0:00:00
+Downloading apache_airflow-3.1.8-py3-none-any.whl (12 kB)
+Downloading apache_airflow_core-3.1.8-py3-none-any.whl (3.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 32.5 MB/s  0:00:00
+Downloading apache_airflow_task_sdk-1.1.8-py3-none-any.whl (305 kB)
+Downloading aiosqlite-0.21.0-py3-none-any.whl (15 kB)
+Downloading alembic-1.18.4-py3-none-any.whl (263 kB)
+Downloading fastapi-0.117.1-py3-none-any.whl (95 kB)
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading opentelemetry_proto-1.40.0-py3-none-any.whl (72 kB)
+Downloading protobuf-6.33.6-cp310-abi3-win_amd64.whl (437 kB)
+Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+Downloading pydantic_core-2.41.5-cp313-cp313-win_amd64.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 40.0 MB/s  0:00:00
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.6-cp313-cp313-win_amd64.whl (154 kB)
+Downloading idna-3.11-py3-none-any.whl (71 kB)
+Downloading starlette-0.48.0-py3-none-any.whl (73 kB)
+Downloading anyio-4.12.1-py3-none-any.whl (113 kB)
+Downloading universal_pathlib-0.2.6-py3-none-any.whl (50 kB)
+Downloading a2wsgi-1.10.10-py3-none-any.whl (17 kB)
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading apache_airflow_providers_common_compat-1.14.1-py3-none-any.whl (42 kB)
+Downloading apache_airflow_providers_common_io-1.7.1-py3-none-any.whl (19 kB)
+Downloading apache_airflow_providers_common_sql-1.33.0-py3-none-any.whl (92 kB)
+Downloading apache_airflow_providers_smtp-2.4.3-py3-none-any.whl (25 kB)
+Downloading aiosmtplib-5.1.0-py3-none-any.whl (27 kB)
+Downloading apache_airflow_providers_standard-1.12.1-py3-none-any.whl (151 kB)
+Downloading argcomplete-3.6.3-py3-none-any.whl (43 kB)
+Downloading asgiref-3.11.1-py3-none-any.whl (24 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading babel-2.18.0-py3-none-any.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 39.3 MB/s  0:00:00
+Downloading cadwyn-5.4.6-py3-none-any.whl (59 kB)
+Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+Downloading colorlog-6.10.1-py3-none-any.whl (11 kB)
+Downloading cron_descriptor-2.0.6-py3-none-any.whl (74 kB)
+Downloading croniter-6.2.2-py3-none-any.whl (45 kB)
+Downloading cryptography-46.0.5-cp311-abi3-win_amd64.whl (3.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 39.4 MB/s  0:00:00
+Downloading cffi-2.0.0-cp313-cp313-win_amd64.whl (183 kB)
+Downloading deprecated-1.3.1-py2.py3-none-any.whl (11 kB)
+Downloading wrapt-2.1.2-cp313-cp313-win_amd64.whl (60 kB)
+Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+Downloading email_validator-2.3.0-py3-none-any.whl (35 kB)
+Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+Downloading fastapi_cli-0.0.24-py3-none-any.whl (12 kB)
+Downloading fsspec-2026.2.0-py3-none-any.whl (202 kB)
+Downloading greenback-1.3.0-py3-none-any.whl (29 kB)
+Downloading greenlet-3.3.2-cp313-cp313-win_amd64.whl (230 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading lazy_object_proxy-1.12.0-cp313-cp313-win_amd64.whl (26 kB)
+Downloading libcst-1.8.6-cp313-cp313-win_amd64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 37.9 MB/s  0:00:00
+Downloading linkify_it_py-2.1.0-py3-none-any.whl (19 kB)
+Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+Downloading markupsafe-3.0.3-cp313-cp313-win_amd64.whl (15 kB)
+Downloading methodtools-0.4.7-py2.py3-none-any.whl (4.0 kB)
+Downloading more_itertools-10.8.0-py3-none-any.whl (69 kB)
+Downloading msgspec-0.20.0-cp313-cp313-win_amd64.whl (189 kB)
+Downloading natsort-8.4.0-py3-none-any.whl (38 kB)
+Downloading numpy-2.4.3-cp313-cp313-win_amd64.whl (12.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 37.1 MB/s  0:00:00
+Downloading opentelemetry_api-1.40.0-py3-none-any.whl (68 kB)
+Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+Downloading opentelemetry_exporter_otlp-1.40.0-py3-none-any.whl (7.0 kB)
+Downloading opentelemetry_exporter_otlp_proto_grpc-1.40.0-py3-none-any.whl (20 kB)
+Downloading opentelemetry_exporter_otlp_proto_common-1.40.0-py3-none-any.whl (18 kB)
+Downloading opentelemetry_exporter_otlp_proto_http-1.40.0-py3-none-any.whl (19 kB)
+Downloading googleapis_common_protos-1.73.0-py3-none-any.whl (297 kB)
+Downloading grpcio-1.78.0-cp313-cp313-win_amd64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 43.4 MB/s  0:00:00
+Downloading opentelemetry_sdk-1.40.0-py3-none-any.whl (141 kB)
+Downloading opentelemetry_semantic_conventions-0.61b0-py3-none-any.whl (231 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading packaging-26.0-py3-none-any.whl (74 kB)
+Downloading pathspec-1.0.4-py3-none-any.whl (55 kB)
+Downloading pendulum-3.2.0-cp313-cp313-win_amd64.whl (258 kB)
+Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+Downloading psutil-7.2.2-cp37-abi3-win_amd64.whl (137 kB)
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 23.9 MB/s  0:00:00
+Downloading pygtrie-2.5.0-py3-none-any.whl (25 kB)
+Downloading pyjwt-2.12.1-py3-none-any.whl (29 kB)
+Downloading python_daemon-3.1.2-py3-none-any.whl (30 kB)
+Downloading python_multipart-0.0.22-py3-none-any.whl (24 kB)
+Downloading python_slugify-8.0.4-py2.py3-none-any.whl (10 kB)
+Downloading pyyaml_ft-8.0.0-cp313-cp313-win_amd64.whl (158 kB)
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading rich-14.3.3-py3-none-any.whl (310 kB)
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading rich_argparse-1.7.2-py3-none-any.whl (25 kB)
+Downloading rich_toolkit-0.19.7-py3-none-any.whl (32 kB)
+Downloading click-8.3.1-py3-none-any.whl (108 kB)
+Downloading rpds_py-0.30.0-cp313-cp313-win_amd64.whl (240 kB)
+Downloading setproctitle-1.3.7-cp313-cp313-win_amd64.whl (13 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading SQLAlchemy_JSONField-1.0.2-py3-none-any.whl (10 kB)
+Downloading sqlalchemy_utils-0.42.1-py3-none-any.whl (91 kB)
+Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+Downloading structlog-25.5.0-py3-none-any.whl (72 kB)
+Downloading svcs-25.1.0-py3-none-any.whl (19 kB)
+Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+Downloading tenacity-9.1.4-py3-none-any.whl (28 kB)
+Downloading termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+Downloading typer-0.24.1-py3-none-any.whl (56 kB)
+Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+Downloading uuid6-2025.0.1-py3-none-any.whl (7.0 kB)
+Downloading uvicorn-0.42.0-py3-none-any.whl (68 kB)
+Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Downloading httptools-0.7.1-cp313-cp313-win_amd64.whl (85 kB)
+Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+Downloading pyyaml-6.0.3-cp313-cp313-win_amd64.whl (154 kB)
+Downloading watchfiles-1.1.1-cp313-cp313-win_amd64.whl (288 kB)
+Downloading websockets-16.0-cp313-cp313-win_amd64.whl (178 kB)
+Downloading wirerope-1.0.0-py2.py3-none-any.whl (9.2 kB)
+Downloading zipp-3.23.0-py3-none-any.whl (10 kB)
+Downloading mako-1.3.10-py3-none-any.whl (78 kB)
+Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Downloading uc_micro_py-2.0.0-py3-none-any.whl (6.4 kB)
+Installing collected packages: text-unidecode, pygtrie, lockfile, zipp, wrapt, websockets, uuid6, urllib3, uc-micro-py, tzdata, typing-extensions, termcolor, tenacity, tabulate, structlog, sqlparse, sniffio, six, shellingham, setproctitle, rpds-py, pyyaml-ft, pyyaml, python-slugify, python-multipart, python-dotenv, python-daemon, pyjwt, pygments, pycparser, psycopg2, psutil, protobuf, pluggy, pathspec, packaging, numpy, natsort, msgspec, more-itertools, mdurl, MarkupSafe, lazy-object-proxy, jmespath, itsdangerous, idna, httptools, h11, greenlet, fsspec, dnspython, dill, colorama, charset_normalizer, certifi, babel, attrs, asgiref, argcomplete, annotated-types, annotated-doc, aiosmtplib, a2wsgi, wirerope, universal-pathlib, typing-inspection, svcs, sqlalchemy, requests, referencing, python-dateutil, pydantic-core, outcome, opentelemetry-proto, markdown-it-py, Mako, linkify-it-py, libcst, jinja2, importlib-metadata, httpcore, grpcio, googleapis-common-protos, email-validator, deprecated, cron-descriptor, colorlog, click, cffi, anyio, aiosqlite, watchfiles, uvicorn, starlette, sqlalchemy-utils, sqlalchemy-jsonfield, rich, pydantic, pendulum, pandas, opentelemetry-exporter-otlp-proto-common, opentelemetry-api, methodtools, jsonschema-specifications, httpx, greenback, cryptography, croniter, botocore, alembic, typer, s3transfer, rich-toolkit, rich-argparse, opentelemetry-semantic-conventions, jsonschema, fastapi, opentelemetry-sdk, fastapi-cli, cadwyn, boto3, opentelemetry-exporter-otlp-proto-http, opentelemetry-exporter-otlp-proto-grpc, opentelemetry-exporter-otlp, apache-airflow-providers-standard, apache-airflow-providers-smtp, apache-airflow-providers-common-sql, apache-airflow-providers-common-io, apache-airflow-providers-common-compat, apache-airflow-task-sdk, apache-airflow-core, apache-airflow
+Successfully installed Mako-1.3.10 MarkupSafe-3.0.3 a2wsgi-1.10.10 aiosmtplib-5.1.0 aiosqlite-0.21.0 alembic-1.18.4 annotated-doc-0.0.4 annotated-types-0.7.0 anyio-4.12.1 apache-airflow-3.1.8 apache-airflow-core-3.1.8 apache-airflow-providers-common-compat-1.14.1 apache-airflow-providers-common-io-1.7.1 apache-airflow-providers-common-sql-1.33.0 apache-airflow-providers-smtp-2.4.3 apache-airflow-providers-standard-1.12.1 apache-airflow-task-sdk-1.1.8 argcomplete-3.6.3 asgiref-3.11.1 attrs-26.1.0 babel-2.18.0 boto3-1.42.73 botocore-1.42.73 cadwyn-5.4.6 certifi-2026.2.25 cffi-2.0.0 charset_normalizer-3.4.6 click-8.3.1 colorama-0.4.6 colorlog-6.10.1 cron-descriptor-2.0.6 croniter-6.2.2 cryptography-46.0.5 deprecated-1.3.1 dill-0.4.1 dnspython-2.8.0 email-validator-2.3.0 fastapi-0.117.1 fastapi-cli-0.0.24 fsspec-2026.2.0 googleapis-common-protos-1.73.0 greenback-1.3.0 greenlet-3.3.2 grpcio-1.78.0 h11-0.16.0 httpcore-1.0.9 httptools-0.7.1 httpx-0.28.1 idna-3.11 importlib-metadata-8.7.1 itsdangerous-2.2.0 jinja2-3.1.6 jmespath-1.1.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 lazy-object-proxy-1.12.0 libcst-1.8.6 linkify-it-py-2.1.0 lockfile-0.12.2 markdown-it-py-4.0.0 mdurl-0.1.2 methodtools-0.4.7 more-itertools-10.8.0 msgspec-0.20.0 natsort-8.4.0 numpy-2.4.3 opentelemetry-api-1.40.0 opentelemetry-exporter-otlp-1.40.0 opentelemetry-exporter-otlp-proto-common-1.40.0 opentelemetry-exporter-otlp-proto-grpc-1.40.0 opentelemetry-exporter-otlp-proto-http-1.40.0 opentelemetry-proto-1.40.0 opentelemetry-sdk-1.40.0 opentelemetry-semantic-conventions-0.61b0 outcome-1.3.0.post0 packaging-26.0 pandas-3.0.1 pathspec-1.0.4 pendulum-3.2.0 pluggy-1.6.0 protobuf-6.33.6 psutil-7.2.2 psycopg2-2.9.11 pycparser-3.0 pydantic-2.12.5 pydantic-core-2.41.5 pygments-2.19.2 pygtrie-2.5.0 pyjwt-2.12.1 python-daemon-3.1.2 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 python-multipart-0.0.22 python-slugify-8.0.4 pyyaml-6.0.3 pyyaml-ft-8.0.0 referencing-0.37.0 requests-2.32.5 rich-14.3.3 rich-argparse-1.7.2 rich-toolkit-0.19.7 rpds-py-0.30.0 s3transfer-0.16.0 setproctitle-1.3.7 shellingham-1.5.4 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.48 sqlalchemy-jsonfield-1.0.2 sqlalchemy-utils-0.42.1 sqlparse-0.5.5 starlette-0.48.0 structlog-25.5.0 svcs-25.1.0 tabulate-0.10.0 tenacity-9.1.4 termcolor-3.3.0 text-unidecode-1.3 typer-0.24.1 typing-extensions-4.15.0 typing-inspection-0.4.2 tzdata-2025.3 uc-micro-py-2.0.0 universal-pathlib-0.2.6 urllib3-2.6.3 uuid6-2025.0.1 uvicorn-0.42.0 watchfiles-1.1.1 websockets-16.0 wirerope-1.0.0 wrapt-2.1.2 zipp-3.23.0
+
+[notice] A new release of pip is available: 25.3 -> 26.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\bhava>mkdir ecommerce-etl
+
+C:\Users\bhava>cd ecommerce-etl
+
+C:\Users\bhava\ecommerce-etl>mkdir data scripts dags logs config
+
+C:\Users\bhava\ecommerce-etl>New-Item scripts\extract.py
+'New-Item' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\bhava\ecommerce-etl>type nul > scripts\extract.py
+
+C:\Users\bhava\ecommerce-etl>type nul > scripts\transform.py
+
+C:\Users\bhava\ecommerce-etl>type nul > scripts\load.py
+
+C:\Users\bhava\ecommerce-etl>type nul > config\config.py
+
+C:\Users\bhava\ecommerce-etl>type nul > requirements.txt
+
+C:\Users\bhava\ecommerce-etl>type nul > .gitignore
+
+C:\Users\bhava\ecommerce-etl>git init
+Initialized empty Git repository in C:/Users/bhava/ecommerce-etl/.git/
+
+C:\Users\bhava\ecommerce-etl>git add .
+
+C:\Users\bhava\ecommerce-etl>git commit -m "Initiak structure"
+[main (root-commit) ec2eb2e] Initiak structure
+ 6 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 config/config.py
+ create mode 100644 requirements.txt
+ create mode 100644 scripts/extract.py
+ create mode 100644 scripts/load.py
+ create mode 100644 scripts/transform.py
+
+C:\Users\bhava\ecommerce-etl>git init
+Reinitialized existing Git repository in C:/Users/bhava/ecommerce-etl/.git/
+
+C:\Users\bhava\ecommerce-etl>git add .
+
+C:\Users\bhava\ecommerce-etl>git commit -m "Project initial structure"
+On branch main
+nothing to commit, working tree clean
+
+C:\Users\bhava\ecommerce-etl>git remote add origin https://github.com/bhavana-nalabothu/ecommerce-etl-pipeline.git
+
+C:\Users\bhava\ecommerce-etl>git branch -M main
+
+C:\Users\bhava\ecommerce-etl>git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 421 bytes | 140.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/bhavana-nalabothu/ecommerce-etl-pipeline.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\bhava\ecommerce-etl>type nul > README.md
+
+C:\Users\bhava\ecommerce-etl>git add .
+
+C:\Users\bhava\ecommerce-etl>git commit -m "Added Readme"
+[main 88e4d8b] Added Readme
+ 1 file changed, 39 insertions(+)
+ create mode 100644 README.md
+
+C:\Users\bhava\ecommerce-etl>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 698 bytes | 349.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/bhavana-nalabothu/ecommerce-etl-pipeline.git
+   ec2eb2e..88e4d8b  main -> main
+
+C:\Users\bhava\ecommerce-etl>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\bhava\ecommerce-etl>git add .
+
+C:\Users\bhava\ecommerce-etl>git commit -m "Added Choclate sales data csv file"
+[main 3a9fa4d] Added Choclate sales data csv file
+ 1 file changed, 1095 insertions(+)
+ create mode 100644 Chocolate Sales.csv
+
+C:\Users\bhava\ecommerce-etl>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 13.86 KiB | 2.77 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/bhavana-nalabothu/ecommerce-etl-pipeline.git
+   88e4d8b..3a9fa4d  main -> main
+
+C:\Users\bhava\ecommerce-etl>pip install pandas boto3
+Requirement already satisfied: pandas in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (3.0.1)
+Requirement already satisfied: boto3 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (1.42.73)
+Requirement already satisfied: numpy>=1.26.0 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2.4.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: tzdata in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2025.3)
+Requirement already satisfied: botocore<1.43.0,>=1.42.73 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from boto3) (1.42.73)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from boto3) (1.1.0)
+Requirement already satisfied: s3transfer<0.17.0,>=0.16.0 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from boto3) (0.16.0)
+Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from botocore<1.43.0,>=1.42.73->boto3) (2.6.3)
+Requirement already satisfied: six>=1.5 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+
+[notice] A new release of pip is available: 25.3 -> 26.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\bhava\ecommerce-etl>aws configure
+'aws' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\bhava\ecommerce-etl>AWSCLIV2.msi
+'AWSCLIV2.msi' is not recognized as an internal or external command,
+operable program or batch file.
