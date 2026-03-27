@@ -1,0 +1,72 @@
+Microsoft Windows [Version 10.0.26100.8039]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\bhava>cd ecommerce-etl
+
+C:\Users\bhava\ecommerce-etl>python scripts/transform.py
+
+C:\Users\bhava\ecommerce-etl>python scripts/transform.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\transform.py", line 31, in <module>
+    df = extract_from_s3(bucket, file_key)
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.NoSuchKey: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+
+C:\Users\bhava\ecommerce-etl>python scripts/transform.py
+Data extracted successfully!
+     Sales Person    Country              Product       Date    Amount  Boxes Shipped
+0  Jehu Rudeforth         UK      Mint Chip Choco  04-Jan-22   $5,320             180
+1     Van Tuxwell      India        85% Dark Bars  01-Aug-22   $7,896              94
+2    Gigi Bohling      India  Peanut Butter Cubes  07-Jul-22   $4,501              91
+3    Jan Morforth  Australia  Peanut Butter Cubes  27-Apr-22  $12,726             342
+4  Jehu Rudeforth         UK  Peanut Butter Cubes  24-Feb-22  $13,685             184
+Traceback (most recent call last):
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'price'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\transform.py", line 32, in <module>
+    transform_data(df)
+    ~~~~~~~~~~~~~~^^^^
+  File "C:\Users\bhava\ecommerce-etl\scripts\transform.py", line 15, in transform_data
+    df['total_price'] = df['price'] * df['quantity']
+                        ~~^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\frame.py", line 4378, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\core\indexes\base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'price'
+
+C:\Users\bhava\ecommerce-etl>python scripts/transform.py
+C:\Users\bhava\ecommerce-etl\scripts\transform.py:9: SyntaxWarning: invalid escape sequence '\$'
+  df['Amount'] = df['Amount'].replace('[\$,]', '', regex=True).astype(float)
+Data extracted successfully!
+     Sales Person    Country              Product       Date    Amount  Boxes Shipped
+0  Jehu Rudeforth         UK      Mint Chip Choco  04-Jan-22   $5,320             180
+1     Van Tuxwell      India        85% Dark Bars  01-Aug-22   $7,896              94
+2    Gigi Bohling      India  Peanut Butter Cubes  07-Jul-22   $4,501              91
+3    Jan Morforth  Australia  Peanut Butter Cubes  27-Apr-22  $12,726             342
+4  Jehu Rudeforth         UK  Peanut Butter Cubes  24-Feb-22  $13,685             184
+Data transformed successfully!
+     Sales Person    Country              Product       Date   Amount  Boxes Shipped  price_per_box
+0  Jehu Rudeforth         UK      Mint Chip Choco 2022-01-04   5320.0            180      29.555556
+1     Van Tuxwell      India        85% Dark Bars 2022-08-01   7896.0             94      84.000000
+2    Gigi Bohling      India  Peanut Butter Cubes 2022-07-07   4501.0             91      49.461538
+3    Jan Morforth  Australia  Peanut Butter Cubes 2022-04-27  12726.0            342      37.210526
+4  Jehu Rudeforth         UK  Peanut Butter Cubes 2022-02-24  13685.0            184      74.375000

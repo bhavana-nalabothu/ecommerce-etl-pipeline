@@ -17,7 +17,7 @@ def extract_from_s3(bucket_name, file_key):
     return df
 
 if __name__ == "__main__":
-    bucket = "ecommerce-etl-bucket-bhavana-303575244299-us-east-2-an"       
+    bucket ="ecommerce-etl-bucket-bhavana-303575244299-us-east-2-an"       
     file_key = "Chocolate Sales.csv"       
 
     extract_from_s3(bucket, file_key)
