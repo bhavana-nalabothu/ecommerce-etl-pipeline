@@ -3,11 +3,11 @@ import psycopg2
 from extract import extract_from_s3
 
 # CONFIG
-bucket_name = "ecommerce-etl-bucket-bhavana-303575244299-us-east-2-an"
-file_key = "Chocolate Sales.csv"
+bucket_name = "*******************************************"
+file_key = "**************************"
 
 db_user = "postgres"
-db_password = "Sureshbabu"
+db_password = "****************"
 db_host = "ecommerce-db.cvmguwio8spk.us-east-2.rds.amazonaws.com"
 db_port = "5432"
 db_name = "ecommerce_db"
