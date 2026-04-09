@@ -1,8 +1,11 @@
 import pandas as pd
 import psycopg2
 from extract import extract_from_s3
-
-
+db_user = "postgres"
+db_password = "Sureshbabu"
+db_host = "ecommerce-db.cvmguwio8spk.us-east-2.rds.amazonaws.com"
+db_port = "5432"
+db_name = "ecommerce_db"
 table_name = "sales_data"
 
 # LOAD FUNCTION

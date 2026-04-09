@@ -1,0 +1,429 @@
+Microsoft Windows [Version 10.0.26100.8117]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\bhava>cd ecommerce-etl
+
+C:\Users\bhava\ecommerce-etl>pip install psycopg2-binary boto3 pandas
+Requirement already satisfied: psycopg2-binary in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (2.9.11)
+Requirement already satisfied: boto3 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (1.42.73)
+Requirement already satisfied: pandas in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (3.0.1)
+Requirement already satisfied: botocore<1.43.0,>=1.42.73 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from boto3) (1.42.73)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from boto3) (1.1.0)
+Requirement already satisfied: s3transfer<0.17.0,>=0.16.0 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from boto3) (0.16.0)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from botocore<1.43.0,>=1.42.73->boto3) (2.9.0.post0)
+Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from botocore<1.43.0,>=1.42.73->boto3) (2.6.3)
+Requirement already satisfied: six>=1.5 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.43.0,>=1.42.73->boto3) (1.17.0)
+Requirement already satisfied: numpy>=1.26.0 in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2.4.3)
+Requirement already satisfied: tzdata in c:\users\bhava\appdata\local\programs\python\python313\lib\site-packages (from pandas) (2025.3)
+
+[notice] A new release of pip is available: 25.3 -> 26.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+C:\Users\bhava\ecommerce-etl>pip list
+Package                                  Version
+---------------------------------------- -----------
+a2wsgi                                   1.10.10
+aiosmtplib                               5.1.0
+aiosqlite                                0.21.0
+alembic                                  1.18.4
+annotated-doc                            0.0.4
+annotated-types                          0.7.0
+anyio                                    4.12.1
+apache-airflow                           3.1.8
+apache-airflow-core                      3.1.8
+apache-airflow-providers-common-compat   1.14.1
+apache-airflow-providers-common-io       1.7.1
+apache-airflow-providers-common-sql      1.33.0
+apache-airflow-providers-smtp            2.4.3
+apache-airflow-providers-standard        1.12.1
+apache-airflow-task-sdk                  1.1.8
+argcomplete                              3.6.3
+asgiref                                  3.11.1
+attrs                                    26.1.0
+babel                                    2.18.0
+boto3                                    1.42.73
+botocore                                 1.42.73
+cadwyn                                   5.4.6
+certifi                                  2026.2.25
+cffi                                     2.0.0
+charset-normalizer                       3.4.6
+click                                    8.3.1
+colorama                                 0.4.6
+colorlog                                 6.10.1
+cron_descriptor                          2.0.6
+croniter                                 6.2.2
+cryptography                             46.0.5
+Deprecated                               1.3.1
+dill                                     0.4.1
+dnspython                                2.8.0
+email-validator                          2.3.0
+fastapi                                  0.117.1
+fastapi-cli                              0.0.24
+fsspec                                   2026.2.0
+googleapis-common-protos                 1.73.0
+greenback                                1.3.0
+greenlet                                 3.3.2
+grpcio                                   1.78.0
+h11                                      0.16.0
+httpcore                                 1.0.9
+httptools                                0.7.1
+httpx                                    0.28.1
+idna                                     3.11
+importlib_metadata                       8.7.1
+itsdangerous                             2.2.0
+Jinja2                                   3.1.6
+jmespath                                 1.1.0
+jsonschema                               4.26.0
+jsonschema-specifications                2025.9.1
+lazy-object-proxy                        1.12.0
+libcst                                   1.8.6
+linkify-it-py                            2.1.0
+lockfile                                 0.12.2
+Mako                                     1.3.10
+markdown-it-py                           4.0.0
+MarkupSafe                               3.0.3
+mdurl                                    0.1.2
+methodtools                              0.4.7
+more-itertools                           10.8.0
+msgspec                                  0.20.0
+natsort                                  8.4.0
+numpy                                    2.4.3
+opentelemetry-api                        1.40.0
+opentelemetry-exporter-otlp              1.40.0
+opentelemetry-exporter-otlp-proto-common 1.40.0
+opentelemetry-exporter-otlp-proto-grpc   1.40.0
+opentelemetry-exporter-otlp-proto-http   1.40.0
+opentelemetry-proto                      1.40.0
+opentelemetry-sdk                        1.40.0
+opentelemetry-semantic-conventions       0.61b0
+outcome                                  1.3.0.post0
+packaging                                26.0
+pandas                                   3.0.1
+pathspec                                 1.0.4
+pendulum                                 3.2.0
+pip                                      25.3
+pluggy                                   1.6.0
+protobuf                                 6.33.6
+psutil                                   7.2.2
+psycopg2                                 2.9.11
+psycopg2-binary                          2.9.11
+pycparser                                3.0
+pydantic                                 2.12.5
+pydantic_core                            2.41.5
+Pygments                                 2.19.2
+pygtrie                                  2.5.0
+PyJWT                                    2.12.1
+python-daemon                            3.1.2
+python-dateutil                          2.9.0.post0
+python-dotenv                            1.2.2
+python-multipart                         0.0.22
+python-slugify                           8.0.4
+pywin32                                  311
+PyYAML                                   6.0.3
+PyYAML-ft                                8.0.0
+referencing                              0.37.0
+requests                                 2.32.5
+rich                                     14.3.3
+rich-argparse                            1.7.2
+rich-toolkit                             0.19.7
+rpds-py                                  0.30.0
+s3transfer                               0.16.0
+setproctitle                             1.3.7
+setuptools                               80.9.0
+shellingham                              1.5.4
+six                                      1.17.0
+sniffio                                  1.3.1
+SQLAlchemy                               2.0.48
+SQLAlchemy-JSONField                     1.0.2
+SQLAlchemy-Utils                         0.42.1
+sqlparse                                 0.5.5
+starlette                                0.48.0
+structlog                                25.5.0
+svcs                                     25.1.0
+tabulate                                 0.10.0
+tenacity                                 9.1.4
+termcolor                                3.3.0
+text-unidecode                           1.3
+typer                                    0.24.1
+typing_extensions                        4.15.0
+typing-inspection                        0.4.2
+tzdata                                   2025.3
+uc-micro-py                              2.0.0
+universal_pathlib                        0.2.6
+urllib3                                  2.6.3
+uuid6                                    2025.0.1
+uvicorn                                  0.42.0
+vboxapi                                  1
+watchfiles                               1.1.1
+websockets                               16.0
+wirerope                                 1.0.0
+wrapt                                    2.1.2
+zipp                                     3.23.0
+
+C:\Users\bhava\ecommerce-etl>python load.py
+python: can't open file 'C:\\Users\\bhava\\ecommerce-etl\\load.py': [Errno 2] No such file or directory
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 25
+    host=ecommerce-db.cvmguwio8spk.us-east-2.rds.amazonaws.com,
+                                            ^
+SyntaxError: invalid decimal literal
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 25
+    host=ecommerce-db.cvmguwio8spk.us-east-2.rds.amazonaws.com,
+                                            ^
+SyntaxError: invalid decimal literal
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 25
+    host=ecommerce-db.cvmguwio8spk.us-east-2.rds.amazonaws.com,
+                                            ^
+SyntaxError: invalid decimal literal
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 27
+    db_user = "postgres"
+              ^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 27
+    db_user = "postgres"
+              ^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 27
+    db_user = "postgres"
+              ^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 3, in <module>
+    from scripts.extract import extract_from_s3
+ModuleNotFoundError: No module named 'scripts.extract'
+
+C:\Users\bhava\ecommerce-etl>python -m scripts.load
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 81, in <module>
+    df = extract_from_s3(bucket_name, file_key)
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.AccessDenied: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 82, in <module>
+    df = extract_from_s3(bucket_name, file_key)
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.AccessDenied: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 82, in <module>
+    df = extract_from_s3(bucket_name, file_key)
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.AccessDenied: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 82
+    df = extract_from_s3(ecommerce-etl-bucket, Chocolate Sales.csv)
+                                               ^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 82
+    df = extract_from_s3(ecommerce-etl-bucket, Chocolate Sales.csv)
+                                               ^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 82, in <module>
+    df = extract_from_s3(ecommerce-etl-bucket, "Chocolate Sales.csv")
+                         ^^^^^^^^^
+NameError: name 'ecommerce' is not defined
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 82, in <module>
+    df = extract_from_s3("ecommerce-etl-bucket", "Chocolate Sales.csv")
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.AccessDenied: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied
+
+C:\Users\bhava\ecommerce-etl>aws configure list
+NAME       : VALUE                    : TYPE             : LOCATION
+profile    : <not set>                : None             : None
+access_key : ****************APY4     : shared-credentials-file :
+secret_key : ****************Kq8E     : shared-credentials-file :
+region     : us-east-2                : config-file      : ~/.aws/config
+
+C:\Users\bhava\ecommerce-etl>aws configure
+AWS Access Key ID [****************APY4]: ....................
+AWS Secret Access Key [****************Kq8E]: ............................
+Default region name [us-east-2]: aws configure
+Default output format [None]: gg
+
+C:\Users\bhava\ecommerce-etl>aws configure
+AWS Access Key ID [****************APY4]: ........................
+AWS Secret Access Key [****************cTpD]: ...........................
+Default region name [aws configure]: us-east-2
+Default output format [gg]: json
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 82, in <module>
+    df = extract_from_s3("ecommerce-etl-bucket", "Chocolate Sales.csv")
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (SignatureDoesNotMatch) when calling the GetObject operation: The request signature we calculated does not match the signature you provided. Check your key and signing method.
+
+C:\Users\bhava\ecommerce-etl>aws configure list
+NAME       : VALUE                    : TYPE             : LOCATION
+profile    : <not set>                : None             : None
+access_key : ****************APY4     : shared-credentials-file :
+secret_key : ****************cTpD     : shared-credentials-file :
+region     : us-east-2                : config-file      : ~/.aws/config
+
+C:\Users\bhava\ecommerce-etl>aws configure
+AWS Access Key ID [****************APY4]: ............................
+AWS Secret Access Key [****************cTpD]: ..........................
+Default region name [us-east-2]: us-east-2
+Default output format [json]: json
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 82, in <module>
+    df = extract_from_s3("ecommerce-etl-bucket", "Chocolate Sales.csv")
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (InvalidAccessKeyId) when calling the GetObject operation: The AWS Access Key Id you provided does not exist in our records.
+
+C:\Users\bhava\ecommerce-etl>aws configure
+AWS Access Key ID [****************PY4A]: .................................
+AWS Secret Access Key [****************cTpD]: ................................
+Default region name [us-east-2]: us-east-2
+Default output format [json]: json
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 82, in <module>
+    df = extract_from_s3("ecommerce-etl-bucket", "Chocolate Sales.csv")
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.AccessDenied: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 73, in <module>
+    df = extract_from_s3("ecommerce-etl-bucket", "Chocolate Sales.csv")
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.AccessDenied: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 73, in <module>
+    df = extract_from_s3("ecommerce-etl-bucket", "Chocolate Sales.csv")
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.AccessDenied: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Traceback (most recent call last):
+  File "C:\Users\bhava\ecommerce-etl\scripts\load.py", line 73, in <module>
+    df = extract_from_s3("ecommerce-etl-bucket", "Chocolate Sales.csv")
+  File "C:\Users\bhava\ecommerce-etl\scripts\extract.py", line 9, in extract_from_s3
+    response = s3.get_object(Bucket=bucket_name, Key=file_key)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 602, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\bhava\AppData\Local\Programs\Python\Python313\Lib\site-packages\botocore\client.py", line 1078, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.AccessDenied: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied
+
+C:\Users\bhava\ecommerce-etl>python scripts\load.py
+Data extracted successfully!
+     Sales Person    Country              Product       Date    Amount  Boxes Shipped
+0  Jehu Rudeforth         UK      Mint Chip Choco  04-Jan-22   $5,320             180
+1     Van Tuxwell      India        85% Dark Bars  01-Aug-22   $7,896              94
+2    Gigi Bohling      India  Peanut Butter Cubes  07-Jul-22   $4,501              91
+3    Jan Morforth  Australia  Peanut Butter Cubes  27-Apr-22  $12,726             342
+4  Jehu Rudeforth         UK  Peanut Butter Cubes  24-Feb-22  $13,685             184
+Error: connection to server at "ecommerce-db.cvmguwio8spk.us-east-2.rds.amazonaws.com" (172.31.5.38), port 5432 failed: Connection timed out (0x0000274C/10060)
+        Is the server running on that host and accepting TCP/IP connections?
+
+
+C:\Users\bhava\ecommerce-etl>
